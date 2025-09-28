@@ -50,11 +50,70 @@
     .back-link:hover {
       text-decoration: underline;
     }
+    .description-section {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 10px;
+    color: #f0f0f0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 1000px;
+    margin: 0 auto 60px auto;
+}
+
+.description-section h1,
+.description-section h2 {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.description-section ul {
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+.description-section li {
+    margin-bottom: 12px;
+}
+
+.description-section code {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+    color: #ffcc00;
+}
+
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Python Data Mining - Germany Healthcare</h1>
+<div class="description-section">
+    <h1>Python Data Mining – Germany Healthcare Reports</h1>
+
+    <p>This Python script automates the extraction of surgical procedure data from thousands of publicly available <strong>German hospital quality reports</strong> (PDF format). The process uses <code>PyMuPDF</code> for parsing and generates a clean, structured dataset in CSV format.</p>
+
+    <h2>🔍 Key Steps</h2>
+    <ul>
+        <li><strong>File Scanning:</strong> Scans a folder for hospital PDFs and defines the output CSV file.</li>
+        <li><strong>PDF Parsing:</strong> Opens each PDF, extracts hospital IDs (IIN and Standortnummer), and finds <em>OPS procedure codes</em>.</li>
+        <li><strong>Procedure Counts:</strong> Extracts the number of surgeries performed using bounding boxes and fallback text logic.</li>
+        <li><strong>Data Structuring:</strong> Compiles extracted data into rows with year, OPS code, procedure count, and hospital info.</li>
+        <li><strong>CSV Output:</strong> Saves all results into a UTF-8 encoded CSV ready for Tableau or Excel.</li>
+    </ul>
+
+    <h2>🧰 Technologies Used</h2>
+    <ul>
+        <li><strong>PyMuPDF (fitz):</strong> High-precision PDF text and layout extraction.</li>
+        <li><strong>pandas:</strong> For tabular data handling and CSV export.</li>
+        <li><strong>tqdm:</strong> Visual progress bar during PDF parsing.</li>
+        <li><strong>re:</strong> Regular expressions to detect OPS procedure codes.</li>
+    </ul>
+
+    <h2>📊 Example Use Case</h2>
+    <p>This script enables large-scale mining of real-world surgical procedure data (e.g., joint replacements) from unstructured PDFs. It supports analysis of hospital volumes, regional healthcare trends, and orthopedic surgery performance across Germany.</p>
+</div>
 
     <pre><code class="language-python">
 import os
