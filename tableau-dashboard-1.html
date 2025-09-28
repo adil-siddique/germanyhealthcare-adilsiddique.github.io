@@ -45,25 +45,28 @@
     justify-content: center;
     gap: 40px;
     padding: 20px 40px;
-    max-width: 1400px;
+    max-width: 1800px;
     margin: 0 auto;
     box-sizing: border-box;
 }
 
 .dashboard-left {
-    flex: 2;
-    min-width: 300px;
+    flex: 3; /* Was 2 */
+    min-width: 500px;
 }
+
 
 .dashboard-right {
     flex: 1;
-    min-width: 280px;
+    max-width: 300px; /* Add this to limit the width */
+    min-width: 260px;
     background-color: #ffffff;
-    padding: 20px 30px;
+    padding: 20px 25px;
     border-radius: 10px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
     text-align: left;
 }
+
 
 .dashboard-right h2 {
     margin-top: 0;
