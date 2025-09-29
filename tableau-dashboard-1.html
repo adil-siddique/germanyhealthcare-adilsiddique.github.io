@@ -58,13 +58,16 @@
 
 .dashboard-right {
     flex: 1;
-    max-width: 300px; /* Add this to limit the width */
+    max-width: 300px;
     min-width: 260px;
     background-color: #ffffff;
     padding: 20px 25px;
     border-radius: 10px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
     text-align: left;
+    height: 600px; /* Fixed height for scroll */
+    overflow-y: auto; /* Enables internal scrolling */
+    scroll-behavior: smooth; /* Optional: smooth scrolling */
 }
 
 
