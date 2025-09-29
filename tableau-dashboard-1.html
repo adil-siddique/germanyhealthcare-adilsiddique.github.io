@@ -193,14 +193,19 @@
         isMinimized = !isMinimized;
 
         if (isMinimized) {
-            insightsContent.style.display = "none";
-            toggleBtn.innerText = "➡ Expand";
-            insightsBox.style.flex = "0.1"; // Shrink sidebar
-        } else {
-            insightsContent.style.display = "block";
-            toggleBtn.innerText = "⬅ Minimize";
-            insightsBox.style.flex = "1"; // Restore width
-        }
+    insightsContent.style.display = "none";
+    toggleBtn.innerText = "➡ Expand";
+    insightsBox.style.flex = "0.01"; // More aggressive shrink
+    insightsBox.style.minWidth = "40px"; // Let it shrink smaller
+    insightsBox.style.padding = "10px"; // Tight padding
+} else {
+    insightsContent.style.display = "block";
+    toggleBtn.innerText = "⬅ Minimize";
+    insightsBox.style.flex = "1"; // Restore width
+    insightsBox.style.minWidth = "260px"; // Reset to original
+    insightsBox.style.padding = "10px 25px"; // Reset padding
+}
+
     });
 </script>
 
