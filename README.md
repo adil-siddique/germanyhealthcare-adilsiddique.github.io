@@ -1,1 +1,1 @@
-# Insight into Germany's Healthcare and Arthroplasty
+# Insight into Germany's Healthcare
